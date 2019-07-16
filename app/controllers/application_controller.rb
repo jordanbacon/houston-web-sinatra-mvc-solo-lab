@@ -5,7 +5,9 @@ class ApplicationController < Sinatra::Base
       end
     
       get '/' do
-        erb :welcome
+        # erb :welcome
+        @puppy = Puppy.all
+        erb :'puppy/index'
       end
 
    
